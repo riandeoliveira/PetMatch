@@ -23,6 +23,7 @@ const TabLayout = (): ReactElement => {
           tabBarLabelStyle: {
             marginVertical: 4,
             color: colors.light_salmon,
+            fontSize: 12,
             marginTop: 0,
           },
         }}
@@ -37,6 +38,7 @@ const TabLayout = (): ReactElement => {
           tabBarLabelStyle: {
             marginVertical: 4,
             color: colors.light_salmon,
+            fontSize: 12,
             marginTop: 0,
           },
         }}
@@ -51,6 +53,7 @@ const TabLayout = (): ReactElement => {
           tabBarLabelStyle: {
             marginVertical: 4,
             color: colors.light_salmon,
+            fontSize: 12,
             marginTop: 0,
           },
         }}
