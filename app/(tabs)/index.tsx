@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
-import { DiscoverScreen } from "../../features/discover/screens";
+import { LoginScreen } from "../../screens/Login";
 
-const Discover = (): ReactElement => <DiscoverScreen />;
+const Login = (): ReactElement => <LoginScreen />;
 
-export default Discover;
+export default Login;

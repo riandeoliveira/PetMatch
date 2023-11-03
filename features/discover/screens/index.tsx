@@ -11,7 +11,7 @@ import { pets } from "../../../data/pets";
 const width: number = Dimensions.get("window").width;
 const height: number = Dimensions.get("window").height;
 
-export const DiscoverScreen = (): ReactElement => {
+export const MatchScreen = (): ReactElement => {
   return (
     <View>
       {pets.map((pet) => (
