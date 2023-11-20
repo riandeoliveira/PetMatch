@@ -1,9 +1,12 @@
-import { Tabs } from "expo-router";
+import { Tabs, useNavigation } from "expo-router";
 import { ReactElement } from "react";
+import { IconButton } from "react-native-paper";
 import { TabBarIcon } from "../../components/TabBarIcon";
 import { colors } from "../../styles/colors";
 
 const TabLayout = (): ReactElement => {
+  const navigation = useNavigation();
+
   return (
     <Tabs
       screenOptions={{
@@ -22,11 +25,38 @@ const TabLayout = (): ReactElement => {
         }}
       />
       <Tabs.Screen
+        name="ongs"
+        options={{
+          title: "Busca",
+          headerTitleStyle: {
+            color: colors.light_salmon,
+          },
+          headerLeft: () => (
+            <IconButton
+              icon="reply"
+              iconColor={colors.light_salmon}
+              size={20}
+              onPress={navigation.goBack}
+            />
+          ),
+          href: null,
+          tabBarStyle: { display: "none" },
+        }}
+      />
+      <Tabs.Screen
         name="search"
         options={{
           title: "Busca",
           tabBarIcon: () => (
             <TabBarIcon name="search" color={colors.light_salmon} />
+          ),
+          headerLeft: () => (
+            <IconButton
+              icon="reply"
+              iconColor={colors.light_salmon}
+              size={20}
+              onPress={navigation.goBack}
+            />
           ),
           headerTitleStyle: {
             color: colors.light_salmon,
@@ -49,6 +79,14 @@ const TabLayout = (): ReactElement => {
           tabBarIcon: () => (
             <TabBarIcon name="handshake-o" color={colors.light_salmon} />
           ),
+          headerLeft: () => (
+            <IconButton
+              icon="reply"
+              iconColor={colors.light_salmon}
+              size={20}
+              onPress={navigation.goBack}
+            />
+          ),
           tabBarLabelStyle: {
             marginVertical: 4,
             color: colors.light_salmon,
@@ -64,6 +102,14 @@ const TabLayout = (): ReactElement => {
           headerTitleStyle: {
             color: colors.light_salmon,
           },
+          headerLeft: () => (
+            <IconButton
+              icon="reply"
+              iconColor={colors.light_salmon}
+              size={20}
+              onPress={navigation.goBack}
+            />
+          ),
           tabBarIcon: () => (
             <TabBarIcon name="paw" color={colors.light_salmon} />
           ),
@@ -82,6 +128,14 @@ const TabLayout = (): ReactElement => {
           headerTitleStyle: {
             color: colors.light_salmon,
           },
+          headerLeft: () => (
+            <IconButton
+              icon="reply"
+              iconColor={colors.light_salmon}
+              size={20}
+              onPress={navigation.goBack}
+            />
+          ),
           tabBarIcon: () => (
             <TabBarIcon name="building" color={colors.light_salmon} />
           ),
@@ -100,6 +154,14 @@ const TabLayout = (): ReactElement => {
           headerTitleStyle: {
             color: colors.light_salmon,
           },
+          headerLeft: () => (
+            <IconButton
+              icon="reply"
+              iconColor={colors.light_salmon}
+              size={20}
+              onPress={navigation.goBack}
+            />
+          ),
           tabBarIcon: () => (
             <TabBarIcon name="user-circle" color={colors.light_salmon} />
           ),

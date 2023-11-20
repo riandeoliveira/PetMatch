@@ -39,7 +39,13 @@ export const SearchScreen = (): ReactElement => {
           <TextInput
             label="Nome do pet"
             activeUnderlineColor={colors.light_salmon}
-            style={{ flex: 1, backgroundColor: "#fff", borderRadius: 10 }}
+            textColor="#000"
+            style={{
+              flex: 1,
+              backgroundColor: "#fff",
+              borderRadius: 10,
+              color: "#000",
+            }}
           />
           <Menu
             visible={visible}
@@ -57,9 +63,21 @@ export const SearchScreen = (): ReactElement => {
               backgroundColor: "#fff",
             }}
           >
-            <Menu.Item onPress={() => {}} title="Ordem Alfabética" />
-            <Menu.Item onPress={() => {}} title="Proximidade" />
-            <Menu.Item onPress={() => {}} title="Idade" />
+            <Menu.Item
+              onPress={() => {}}
+              title="Ordem Alfabética"
+              titleStyle={{ color: "#000" }}
+            />
+            <Menu.Item
+              onPress={() => {}}
+              title="Proximidade"
+              titleStyle={{ color: "#000" }}
+            />
+            <Menu.Item
+              onPress={() => {}}
+              title="Idade"
+              titleStyle={{ color: "#000" }}
+            />
           </Menu>
         </View>
         <View style={{ marginTop: 24 }}>
@@ -86,7 +104,7 @@ export const SearchScreen = (): ReactElement => {
                   }}
                 />
                 <View>
-                  <Title>{item.name}</Title>
+                  <Title style={{ color: "#000" }}>{item.name}</Title>
                   <View
                     style={{
                       flexDirection: "row",
@@ -103,6 +121,7 @@ export const SearchScreen = (): ReactElement => {
                           borderColor: colors.light_salmon,
                           borderRadius: 10,
                           padding: 6,
+                          color: "#000",
                         }}
                         key={value}
                       >

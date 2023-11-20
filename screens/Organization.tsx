@@ -38,6 +38,7 @@ export const OrganizationScreen = (): ReactElement => {
         >
           <TextInput
             label="Nome da ONG"
+            textColor="#000"
             activeUnderlineColor={colors.light_salmon}
             style={{ flex: 1, backgroundColor: "#fff", borderRadius: 10 }}
           />
@@ -57,8 +58,16 @@ export const OrganizationScreen = (): ReactElement => {
               backgroundColor: "#fff",
             }}
           >
-            <Menu.Item onPress={() => {}} title="Ordem Alfabética" />
-            <Menu.Item onPress={() => {}} title="Proximidade" />
+            <Menu.Item
+              onPress={() => {}}
+              title="Ordem Alfabética"
+              titleStyle={{ color: "#000" }}
+            />
+            <Menu.Item
+              onPress={() => {}}
+              title="Proximidade"
+              titleStyle={{ color: "#000" }}
+            />
           </Menu>
         </View>
         <View style={{ marginTop: 24 }}>
@@ -85,10 +94,10 @@ export const OrganizationScreen = (): ReactElement => {
                   }}
                 />
                 <View>
-                  <Title>{item.name}</Title>
-                  <Text>{item.address}</Text>
-                  <Text>{item.cep}</Text>
-                  <Text>{item.neighborhood}</Text>
+                  <Title style={{ color: "#000" }}>{item.name}</Title>
+                  <Text style={{ color: "#000" }}>{item.address}</Text>
+                  <Text style={{ color: "#000" }}>{item.cep}</Text>
+                  <Text style={{ color: "#000" }}>{item.neighborhood}</Text>
                 </View>
               </View>
             )}
